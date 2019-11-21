@@ -99,10 +99,7 @@ class PicSelectController: UIViewController {
 //        picker.dismiss(animated: true, completion: nil)
 //    }
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        if let originalImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
-            // do stuff with your original image...
-
-        } else if let editedImage = info[UIImagePickerController.InfoKey.editedImage] as? UIImage {
+        if let editedImage = info[UIImagePickerController.InfoKey.editedImage] as? UIImage {
             // do something with your edited image...
             self.imgPreview.image = editedImage
         }
